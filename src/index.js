@@ -11,7 +11,7 @@ function renderMovie(movie) {
 
     moviePoster.src = movie.poster
     movieTitle.textContent = movie.title 
-    movieRuntime.textContent = movie.runtime 
+    movieRuntime.textContent = `${movie.runtime} minutes` 
     movieShowtime.textContent = movie.showtime 
     movieAvailTick.textContent = (movie.capacity - movie.tickets_sold)
     movieInfo.textContent = movie.description
@@ -34,7 +34,7 @@ function renderTitles(titles) {
         
         const movieTitle = document.createElement('li')
         movieTitle.textContent = data.title  
-        //movieTitle.class = 'film item'
+        
         movieTitleList.append(movieTitle)
 
         
